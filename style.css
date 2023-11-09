@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --first-color: #14161F;
+  --second-color: #F9F9F9;
+  --border-color: #F9F9F9;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--second-color);
+  background-color: var(--first-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  height: 220px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 64px;
+  font-weight: 200;
+}
+
+header p {
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h2.title {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.transactions {
+  width: 1000px;
+}
+
+.transactions h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.transaction-list {
+  display: flex;
+}
+
+.income-area,
+.expenses-area {
+  margin: 0 20px;
+  padding: 30px;
+  width: 50%;
+  border: 1px solid var(--border-color);
+}
+
+.income-area h3,
+.income-area .transaction-amount {
+  color: rgb(19, 200, 108);
+  font-weight: bold;
+}
+
+.error {
+  display: none;
+  color: rgb(255, 104, 104);
+  padding-top: 10px;
+}
+
+.expenses-area h3,
+.expenses-area .transaction-amount {
+  color: rgb(255, 104, 104);
+  font-weight: bold;
+}
+
+.transaction {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-name {
+  font-size: 18px;
+}
+
+.transaction-name i {
+  margin-right: 10px;
+}
+
+.delete {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--second-color);
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.delete:hover {
+  transform: scale(.8);
+}
+
+.options {
+  padding: 80px 40px;
+  width: 500px;
+  border: 1px solid var(--border-color);
+}
+
+.available-money {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.controls button {
+  padding: 12px 20px;
+  color: var(--second-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: none;
+  transition: color .3s, background-color .3s;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  color: var(--first-color);
+  background-color: var(--second-color);
+}
+
+.controls i {
+  margin-right: 10px;
+}
+
+.style-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-buttons button {
+  margin: 0 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.color-buttons button:hover {
+  transform: scale(.9);
+}
+
+.color-buttons .light {
+  background: #F9F9F9;
+  border: 1px solid #14161F;
+}
+
+.color-buttons .dark {
+  background: #14161F;
+  border: 1px solid #F9F9F9;
+}
+
+.add-transaction-panel {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  width: 100%;
+  height: 100%;
+}
+
+.add-transaction-panel h2.title {
+  margin-bottom: 0;
+}
+
+.add-transaction-panel label {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.add-transaction-panel small {
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #ddd;
+}
+
+.add-transaction-panel input,
+.add-transaction-panel select {
+  width: 800px;
+}
+
+.add-transaction-panel input,
+.add-transaction-panel select,
+.add-transaction-panel button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-transaction-panel input,
+.add-transaction-panel select,
+.add-transaction-panel option {
+  font-size: 18px;
+}
+
+
+.add-transaction-panel .panel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.add-transaction-panel button {
+  margin: 0 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.add-transaction-panel button:hover {
+  background-color: rgb(25, 27, 51);
+
+}
