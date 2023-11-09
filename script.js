@@ -19,6 +19,10 @@ const removeAllBtn = document.querySelector('.delete-all');
 const saveBtn = document.querySelector('.save');
 const closeBtn = document.querySelector('.cancel');
 
+const lightMotive = document.querySelector('.light');
+const darkMotive = document.querySelector('.dark');
+let root = document.documentElement;
+
 
 const showPopup = () => {
   popup.style.display = 'flex';
@@ -150,6 +154,17 @@ addBtn.addEventListener('click', showPopup);
 removeAllBtn.addEventListener('click', removeAllTrans);
 saveBtn.addEventListener('click', createTrans);
 closeBtn.addEventListener('click', hidePopup);
+
+lightMotive.addEventListener('click', () => {
+  root.style.setProperty('--first-color', "#ccc793");
+  root.style.setProperty('--second-color', "#14161F");
+  root.style.setProperty('--border-color', "#14161F");
+});
+darkMotive.addEventListener('click', () => {
+  root.style.setProperty('--first-color', "#14161F");
+  root.style.setProperty('--second-color', "#ccc793");
+  root.style.setProperty('--border-color', "#ccc793");
+});
 
 document.addEventListener("click", function(e){
   const target = e.target.closest('.delete');
